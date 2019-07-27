@@ -20,6 +20,66 @@ public class Car {
     public Car() {
 
     }
+    //Getters & setter
+    public int getMaxSpeed() {
+        return this.maxSpeed;
+    }
+
+    public void setMaxSpeed(int newMaxSpeed) {
+        this.maxSpeed = newMaxSpeed;
+    }
+
+    public int getMinSpeed() {
+        return this.minSpeed;
+    }
+
+
+    public int getNumberOfPeopleInCar() {
+        return this.numberOfPeopleInCar;
+    }
+
+
+    public void setNumberOfPeopleInCar(int newNumberOfPeopleInCar) {
+        this.numberOfPeopleInCar = newNumberOfPeopleInCar;
+    }
+
+
+    public int getMaxNumberOfPeopleInCar() {
+        return this.maxNumberOfPeopleInCar;
+    }
+
+    public void setMaxNumberOfPeopleInCar(int newMaxPeopleInCar) {
+        this.maxNumberOfPeopleInCar = newMaxPeopleInCar;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public double getMaxFuel() {
+        return this.maxFuel;
+    }
+
+    public double getCurrentFuel() {
+        return this.currentFuel;
+    }
+
+    public double getMpg() {
+        return this.mpg;
+    }
+
+    public boolean getIsTheCarOn() {
+        return this.isTheCarOn;
+    }
+
+    public char getCondition() {
+        return this.condition;
+    }
+
+    public String getNameOfCar() {
+        return this.nameOfCar;
+    }
+
     public Car (int customMaxSpeed,
                 double customWeight, boolean customIsTheCarOn) {
         maxSpeed = customMaxSpeed;
@@ -38,9 +98,12 @@ public class Car {
         System.out.println(numberOfPeopleInCar);
     }
 
-    public void upgradeMinSpeed() {
-        minSpeed = maxSpeed;
-        maxSpeed = maxSpeed + 1;
+    public void upgradeMaxSpeed() {
+        setMaxSpeed(getMaxSpeed() + 10);
+    }
+
+    public void expandSeats() {
+        setMaxNumberOfPeopleInCar(getMaxNumberOfPeopleInCar() + 2);
     }
 
     public void getIn() {
